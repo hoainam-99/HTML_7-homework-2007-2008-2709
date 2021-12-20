@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài tập ôn luyện Function</title>
+</head>
+<body>
+    <script>
+        var a = parseFloat(prompt('Nhap a = '))
+        var c = prompt('Nhap bieu thuc: ')
+        var b = parseFloat(prompt('nhap b = '))
+        function cong(a, b){
+            return a +b;
+        }
+        function tru(a, b){
+            return a - b;
+        }
+        function nhan(a, b){
+            return a*b;
+        }
+        function chia(a, b){
+            return a/b;
+        }
+        switch(c){
+            case '+':{
+                console.log(`Tong cua a va b la: ${cong(a,b)}`)
+                break;
+            }
+            case '-':{
+                console.log(`Hieu cua a va b la: ${hieu(a, b)}`)
+                break;
+            }
+            case '*':{
+                console.log(`Tich cua a va b la: ${nhan(a,b)}`)
+                break;
+            }
+            case '/':{
+                console.log(`Thuong cua a va b la: ${chia(a, b)}`)
+                break;
+            }
+            default:{
+                console.log('Bieu thuc khong chinh xac. Xin hay nhap lai!!!')
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sắp xếp mảng trong JS</title>
+</head>
+<body>
+    <script>
+        var n = prompt('Nhap n = ');
+        var t = [];
+        //nhập phần tử cho mảng
+        for (i=0; i<n; i++){
+            t.push(prompt(`Nhap phan tu thu ${i+1}`))
+        }
+        //sắp xếp phần tử trong mảng
+        function sort(arr){
+            for (i=0; i<arr.length; i++){
+                for(j=i+1; j<arr.length; j++){
+                    if(arr[i]>arr[j]){
+                        var temp = arr[i];
+                        arr[i]=arr[j];
+                        arr[j]=temp
+                    }
+                }
+            }
+            return arr;
+        }
+
+        function sum(arr){
+            var tong;
+            tong = 0;
+            for (i=0; i<arr.length; i++){
+                tong +=+ arr[i];
+            }
+            return tong;
+        }
+        console.log(t)
+        console.log(sum(t))
+        alert(`
+              các phần tử của mảng là: {${sort(t)}}
+            tổng của các phần tử trong mảng là: ${sum(t)}
+        `)
+
+    </script>
+</body>
+</html>
